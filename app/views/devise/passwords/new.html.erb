@@ -1,0 +1,22 @@
+<h1 class="todo_list_title">Forgot your password?</h1>
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="forms">
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+    <div class="actions">
+      <%= f.button :submit, "Reset password" %>
+    </div>
+  </div>
+<% end %>
+<div class="links">
+    <%= link_to root_url do%>
+    <i class="fa fa-arrow-left fa-2x"></i>
+    <% end %>
+</div>
+
+
